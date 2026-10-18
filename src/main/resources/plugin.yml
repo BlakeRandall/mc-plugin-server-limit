@@ -1,0 +1,14 @@
+name: FullJoinBypass
+version: "1.0.0"
+main: dev.example.fulljoinbypass.FullJoinBypassPlugin
+api-version: "26.1"
+description: Allows players with fulljoin.bypass to join when the server is full.
+author: Example
+
+softdepend:
+  - Vault
+
+permissions:
+  fulljoin.bypass:
+    description: Allows joining when the server has reached its player limit.
+    default: false
