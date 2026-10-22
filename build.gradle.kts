@@ -38,10 +38,10 @@ tasks.withType<JavaCompile>().configureEach {
     options.release.set(25)
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
-
 tasks.jar {
     archiveBaseName.set("FullJoinBypass")
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
