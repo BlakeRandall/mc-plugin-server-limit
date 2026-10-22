@@ -15,6 +15,9 @@ repositories {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:26.1.2.build.+")
     compileOnly("net.milkbowl.vault:VaultUnlockedAPI:2.16")
+
+    testImplementation("org.junit.jupiter:junit-jupiter:5.13.4")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 java {
@@ -24,6 +27,10 @@ java {
 tasks.withType<JavaCompile>().configureEach {
     options.encoding = "UTF-8"
     options.release.set(25)
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
 
 tasks.jar {

@@ -87,7 +87,9 @@ public final class FullJoinBypassPlugin extends JavaPlugin
                             + " = " + hasPermission
             );
 
-            if (hasPermission) {
+            if (BypassPolicy.shouldGrant(
+                    profile.getId(), profile.getName(), hasPermission
+            )) {
                 event.allow(true);
                 getLogger().info(
                         "Bypass granted for "
